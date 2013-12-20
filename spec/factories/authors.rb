@@ -2,6 +2,7 @@
 
 FactoryGirl.define do
   factory :author do
-    name "MyString"
+    name "Sample Author"
+    email "sammean@example.com"
   end
 end

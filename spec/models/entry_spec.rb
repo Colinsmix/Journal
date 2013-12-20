@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe Entry do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should validate_presence_of :description }
+  it { should validate_presence_of :author_id }
+
+
 end
