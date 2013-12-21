@@ -1,0 +1,11 @@
+<%= form_for(@entry) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %><br>
+  <%= f.label :description %>
+  <%= f.text_area :description %><br>
+  <%= f.label :author_id %>
+  <%= f.collection_select :author_id, Author.all, :id, :name %><br>
+  <%= f.label :category_id %>
+  <%= f.collection_select :category_id, Category.all, :id, :name, { include_blank: true } %><br>
+     <%= f.submit %><br>
+<% end %>

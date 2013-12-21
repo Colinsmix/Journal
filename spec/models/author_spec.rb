@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Author do
+  it { should have_many :entries }
   it { should validate_presence_of :name }
   it { should validate_presence_of :email }
   it { should have_valid(:email).when('test@test.com', 'test+spam@example.com', 'hereisanemail@example.me') }

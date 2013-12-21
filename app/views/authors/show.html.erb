@@ -1,0 +1,12 @@
+<h1><%= @author.name %></h1>
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Back', authors_path %><br>
+
+<h2>Journal Entries</h2><br>
+  <% @author.entries.order('created_at DESC').each do |entry| %>
+    <%= entry.title %> : 
+    <%= entry.category.name %>
+    <%= entry.created_at %>
+    <%= link_to 'Description', entry %><br>
+  <% end %>
+
